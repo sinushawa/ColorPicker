@@ -10,34 +10,30 @@
     <Viewbox>
         <Grid>
             <Image Source="/ColorPicker;component/Images/CircularHueGradient.png" Stretch="Fill"
-                   IsHitTestVisible="False">
+                   IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image.OpacityMask>
                     <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
                         <RadialGradientBrush.GradientStops>
                             <GradientStop Color="Transparent" Offset="0" />
-                            <GradientStop Color="Transparent" Offset="0.839" />
-                            <GradientStop Color="#2d2d30" Offset="0.84" />
-                            <GradientStop Color="#2d2d30" Offset="0.992" />
-                            <GradientStop Color="Transparent" Offset="0.993" />
+                            <GradientStop Color="Transparent" Offset="0.8" />
+                            <GradientStop Color="#2d2d30" Offset="0.82" />
+                            <GradientStop Color="#2d2d30" Offset="0.94" />
+                            <GradientStop Color="Transparent" Offset="0.96" />
                         </RadialGradientBrush.GradientStops>
                     </RadialGradientBrush>
                 </Image.OpacityMask>
             </Image>
-            <Ellipse HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                     Stroke="#aa000000" StrokeThickness="2" Width="260" Height="260" IsHitTestVisible="False"/>
-            <Ellipse HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                     Stroke="#aa000000" StrokeThickness="2"  IsHitTestVisible="False" Width="220" Height="220"/>
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False">
-                <Rectangle Height="15" Width="24" Stroke="#2d2d30" StrokeThickness="3" IsHitTestVisible="False"/>
-                <Rectangle Height="11" Width="20" Stroke="Snow" StrokeThickness="2" IsHitTestVisible="False"/>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                <Ellipse Fill="Transparent" Stroke="White" StrokeThickness="3" Width="20" Height="20"  IsHitTestVisible="False"/>
+                <Ellipse Fill="Transparent" Stroke="#FF232323" StrokeThickness="2" Width="24" Height="24"  IsHitTestVisible="False"/>
                 <Grid.RenderTransform>
                     <TransformGroup>
-                        <RotateTransform Angle="{Binding ElementName=uc, Path=Value}" CenterX="131" CenterY="7.5" />
-                        <TranslateTransform X="-119"/>
+                        <RotateTransform Angle="{Binding ElementName=uc, Path=Value}" CenterX="113" CenterY="0" />
+                        <TranslateTransform X="-113"/>
                     </TransformGroup>
                 </Grid.RenderTransform>
             </Grid>
-            <Path Fill="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0.8" MouseDown="OnMouseDown" MouseMove="OnMouseMove" MouseUp="OnMouseUp" PreviewMouseWheel="OnPreviewMouseWheel">
+            <Path Fill="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0.8" MouseDown="OnMouseDown" MouseMove="OnMouseMove" MouseUp="OnMouseUp" PreviewMouseWheel="OnPreviewMouseWheel" d:IsHidden="True">
                 <Path.Data>
                     <CombinedGeometry GeometryCombineMode="Exclude">
                         <CombinedGeometry.Geometry1>
